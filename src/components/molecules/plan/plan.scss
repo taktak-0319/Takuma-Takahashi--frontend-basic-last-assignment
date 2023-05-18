@@ -1,0 +1,51 @@
+@use "../../variables" as *;
+.plan {
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    overflow-wrap: break-word;
+    font-size: $fontsize-s;
+    margin-bottom: 24px;
+    tr {
+        border: solid 1px $gray_gainsboro;
+        td {
+            padding: 20px 0px;
+        }
+    }
+    tr:nth-child(1) {
+        color: $white;
+        font-size: $fontsize-l;
+        background-color: $orange_zorba;
+    }
+    tr:nth-child(2) {
+        background-color: $gray_desertStorm;
+        color: $orange_bistre;
+        p {
+            font-size: $fontsize-l;
+            span {
+                font-size: $fontsize-xxl;
+                font-family: $fontfamily-mincho;
+                font-style: normal;
+                font-weight: 700;
+                margin-left: 4px;
+                font-size: 40px;
+                line-height: 58px;
+            }
+        }
+    }
+}
+
+.plan:nth-child(even) {
+    tr {
+        border-right: solid 5px $orange_bistre;
+        border-left: solid 5px $orange_bistre;
+    }
+    tr:nth-child(1) {
+        color: $white;
+        background-color: $orange_bistre;
+    }
+    tr:last-child {
+        border-bottom: solid 5px $orange_bistre;
+    }
+}
