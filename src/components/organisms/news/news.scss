@@ -1,0 +1,51 @@
+@use "../../variables" as *;
+.news {
+    background-color: $white_smoke;
+    .news-and-events-title {
+        h2 {
+            font-size: $fontsize-xxl;
+            .caption {
+                font-size: $fontsize-m;
+            }
+        }
+    }
+    .content {
+        background-color: $white;
+        margin-bottom: 30px;
+        .news-list {
+            border: solid 1px $gray_gainsboro;
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-overflow: hidden;
+            transition: transform 0.2s ease;
+            padding: 20px 26px 4px 20px;
+            &:hover {
+                background-color: $gray_gainsboro;
+            }
+            time {
+                color: $gray_nobel;
+                font-size: $fontsize-xs;
+                padding: 0px 0px 10px 0px;
+            }
+            .info {
+                color: $black;
+                font-size: $fontsize-m;
+                font-family: $fontfamily-gothic;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+            }
+        }
+    }
+    .news-and-events-more {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px;
+    }
+}
