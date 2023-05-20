@@ -6,27 +6,33 @@
     justify-content: center;
     overflow-wrap: break-word;
     font-size: $fontsize-s;
+    font-family: $fontfamily-gothic;
     margin-bottom: 24px;
-    tr {
+    .list {
+        width: 35%;
         border: solid 1px $gray_gainsboro;
-        td {
-            padding: 20px 0px;
+        list-style: none;
+        padding-left: 0px;
+        @media (min-width: $breakpoint-lg) {
+            width: 80%;
+        }
+        li {
+            border-bottom: solid 1px $gray_gainsboro;
+            padding: 20px;
         }
     }
-    tr:nth-child(1) {
+    li:nth-child(1) {
         color: $white;
         font-size: $fontsize-l;
         background-color: $orange_zorba;
     }
-    tr:nth-child(2) {
+    li:nth-child(2) {
         background-color: $gray_desertStorm;
         color: $orange_bistre;
         p {
             font-size: $fontsize-l;
             span {
                 font-size: $fontsize-xxl;
-                font-family: $fontfamily-mincho;
-                font-style: normal;
                 font-weight: 700;
                 margin-left: 4px;
                 font-size: 40px;
@@ -37,15 +43,12 @@
 }
 
 .plan:nth-child(even) {
-    tr {
-        border-right: solid 5px $orange_bistre;
-        border-left: solid 5px $orange_bistre;
-    }
-    tr:nth-child(1) {
-        color: $white;
-        background-color: $orange_bistre;
-    }
-    tr:last-child {
-        border-bottom: solid 5px $orange_bistre;
+    .list {
+        box-sizing: border-box;
+        border: solid 5px $orange_bistre;
+        li:nth-child(1) {
+            color: $white;
+            background-color: $orange_bistre;
+        }
     }
 }
