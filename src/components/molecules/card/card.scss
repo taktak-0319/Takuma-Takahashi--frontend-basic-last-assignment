@@ -1,6 +1,8 @@
 @use "../../variables" as *;
 .card {
+    border: none;
     .card-img {
+        border-radius: 0;
         overflow: hidden;
         .img-flg {
             z-index: 1;
@@ -26,7 +28,6 @@
         position: absolute;
         top: 0px;
         left: 9px;
-        font-family: $fontfamily-gothic;
         font-style: normal;
         font-weight: 700;
         line-height: 29px;
