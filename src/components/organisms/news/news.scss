@@ -1,6 +1,5 @@
 @use "../../variables" as *;
 .news {
-    background-color: $white_smoke;
     .news-and-events-title {
         h2 {
             font-size: $fontsize-xxl;
@@ -37,15 +36,21 @@
                 .info {
                     color: $black;
                     font-size: $fontsize-m;
-                    font-family: $fontfamily-gothic;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     width: 100%;
                     transition: transform 0.2s ease;
-                    &:hover {
+                }
+                &:hover {
+                    .info {
                         color: $orange_bistre;
                     }
+                }
+            }
+            &:not(:first-child) {
+                .news-list {
+                    border-top: none;
                 }
             }
         }
