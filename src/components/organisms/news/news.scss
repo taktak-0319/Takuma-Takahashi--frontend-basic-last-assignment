@@ -1,0 +1,65 @@
+@use "../../variables" as *;
+.news {
+    .news-and-events-title {
+        h2 {
+            font-size: $fontsize-xxl;
+            .caption {
+                font-size: $fontsize-m;
+            }
+            @media (max-width: $breakpoint-md) {
+                font-size: $fontsize-l;
+                .caption {
+                    font-size: $fontsize-m;
+                }
+            }
+        }
+    }
+    .content {
+        background-color: $white;
+        margin-bottom: 30px;
+        .news-link {
+            text-decoration: none;
+            .news-list {
+                border: solid 1px $gray_gainsboro;
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                text-overflow: hidden;
+                padding: 20px 26px 4px 20px;
+                time {
+                    color: $gray_nobel;
+                    font-size: $fontsize-xs;
+                    padding: 0px 0px 10px 0px;
+                }
+                .info {
+                    color: $black;
+                    font-size: $fontsize-m;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 100%;
+                    transition: transform 0.2s ease;
+                }
+                &:hover {
+                    .info {
+                        color: $orange_bistre;
+                    }
+                }
+            }
+            &:not(:first-child) {
+                .news-list {
+                    border-top: none;
+                }
+            }
+        }
+    }
+    .news-and-events-more {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px;
+    }
+}
