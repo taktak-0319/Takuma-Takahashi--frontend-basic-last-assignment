@@ -42,6 +42,10 @@
             li:nth-child(1) {
                 color: $white;
                 background-color: $orange_bistre;
+                padding-top: 15px;
+            }
+            li:last-child {
+                padding-bottom: 16px;
             }
         }
     }
