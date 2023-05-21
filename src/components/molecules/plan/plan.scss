@@ -1,52 +1,51 @@
 @use "../../variables" as *;
 .plan {
-    display: flex;
-    position: relative;
     text-align: center;
-    justify-content: center;
     overflow-wrap: break-word;
     font-size: $fontsize-s;
-    font-family: $fontfamily-gothic;
     margin-bottom: 24px;
     .list {
-        border: solid 1px $gray_gainsboro;
+        border-top: solid 1px $gray_gainsboro;
+        border-right: solid 1px $gray_gainsboro;
+        border-left: solid 1px $gray_gainsboro;
         list-style: none;
         padding-left: 0px;
-    }
-    li {
-        border-bottom: solid 1px $gray_gainsboro;
-        padding: 20px;
-    }
-}
-
-li:nth-child(1) {
-    color: $white;
-    font-size: $fontsize-l;
-    background-color: $orange_zorba;
-}
-
-li:nth-child(2) {
-    background-color: $gray_desertStorm;
-    color: $orange_bistre;
-    p {
-        font-size: $fontsize-l;
-        span {
-            font-size: $fontsize-xxl;
-            font-weight: 700;
-            margin-left: 4px;
-            font-size: 40px;
-            line-height: 58px;
+        li {
+            border-bottom: solid 1px $gray_gainsboro;
+            padding: 20px;
+        }
+        li:nth-child(1) {
+            color: $white;
+            font-size: $fontsize-l;
+            background-color: $orange_zorba;
+        }
+        li:nth-child(2) {
+            background-color: $gray_desertStorm;
+            color: $black;
+            p {
+                font-size: $fontsize-l;
+                color: $orange_bistre;
+                span {
+                    font-size: $fontsize-xxl;
+                    font-weight: 700;
+                    margin-left: 4px;
+                    font-size: 40px;
+                    line-height: 58px;
+                }
+            }
         }
     }
 }
 
-.plan:nth-child(even) {
-    .list {
-        box-sizing: border-box;
-        border: solid 5px $orange_bistre;
-        li:nth-child(1) {
-            color: $white;
-            background-color: $orange_bistre;
+.plan {
+    &:nth-child(even) {
+        .list {
+            box-sizing: border-box;
+            border: solid 5px $orange_bistre;
+            li:nth-child(1) {
+                color: $white;
+                background-color: $orange_bistre;
+            }
         }
     }
 }
