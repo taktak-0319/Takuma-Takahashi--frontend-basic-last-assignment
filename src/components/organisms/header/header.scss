@@ -1,1 +1,96 @@
 @use "../../variables" as *;
+.navbar {
+    background-color: $black_50;
+    width: auto;
+    @media (max-width: $breakpoint-xl) {
+        height: 60px;
+        background-color: $black;
+        padding: 11px 0;
+    }
+    .navbar-brand {
+        img {
+            width: 140px;
+            margin-left: 30px;
+            @media (max-width: $breakpoint-xl) {
+                width: 120px;
+                margin-left: 16px;
+            }
+        }
+    }
+    .navbar-toggler {
+        border: none;
+        margin-right: 16px;
+        &:focus {
+            box-shadow: none;
+        }
+        .navbar-toggler-icon {
+            width: 15px;
+            background-image: url(../../../img/humberger-bar.svg);
+        }
+    }
+    #navbarSupportedContent {
+        margin-right: 30px;
+        @media (max-width: $breakpoint-xl) {
+            margin-right: 0;
+            background-color: black;
+        }
+    }
+    #navbarNavDropdown {
+        display: block;
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    @media (max-width: $breakpoint-xl) {
+                        background-image: url(../../../img/plus.svg);
+                        background-repeat: no-repeat;
+                        background-position: 98%;
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        font-size: $fontsize-s;
+        border: none;
+        background-color: $black;
+        margin-top: 8px;
+        padding: 0;
+        border-radius: 0;
+        .dropdown-item {
+            padding: 18px;
+            transition: 0.2s ease;
+            color: $white;
+            &:hover {
+                background-color: $orange_bistre;
+            }
+            @media (max-width: $breakpoint-xl) {
+                padding-left: 28px;
+                background-color: $black;
+                &:hover {
+                    background-color: $black;
+                }
+            }
+        }
+    }
+    .nav-item {
+        font-size: $fontsize-s;
+        .nav-link {
+            display: block;
+            padding: 35px 20px;
+            color: $white;
+            @media (max-width: $breakpoint-xl) {
+                margin-right: 0;
+                padding: 15px 16px;
+            }
+            &:hover {
+                @media (min-width: $breakpoint-xl) {
+                    color: $gray_nobel;
+                }
+                color: $white;
+            }
+        }
+    }
+}
