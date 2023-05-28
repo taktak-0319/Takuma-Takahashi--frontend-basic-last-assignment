@@ -44,10 +44,7 @@
                     @media (max-width: $breakpoint-xl) {
                         background-image: url(../../../img/plus.svg);
                         background-repeat: no-repeat;
-                        background-position: 98%;
-                        &:checked {
-                            background-image: url(../../../img/minus.svg);
-                        }
+                        background-position: 98.5%;
                     }
                 }
             }
