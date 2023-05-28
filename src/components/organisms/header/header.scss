@@ -5,7 +5,7 @@
     @media (max-width: $breakpoint-xl) {
         height: 60px;
         background-color: $black;
-        padding: 11px 0;
+        padding: 10px 0px;
     }
     .navbar-brand {
         img {
@@ -20,6 +20,7 @@
     .navbar-toggler {
         border: none;
         margin-right: 16px;
+        width: 15px;
         &:focus {
             box-shadow: none;
         }
@@ -44,10 +45,28 @@
                         background-image: url(../../../img/plus.svg);
                         background-repeat: no-repeat;
                         background-position: 98%;
-                        &:hover {
-                            color: $white;
+                        &:checked {
+                            background-image: url(../../../img/minus.svg);
                         }
                     }
+                }
+            }
+        }
+    }
+    .nav-item {
+        font-size: $fontsize-s;
+        .nav-link {
+            display: block;
+            padding: 35px 20px;
+            color: $white;
+            width: 100%;
+            @media (max-width: $breakpoint-xl) {
+                padding: 15px 16px;
+                height: 50px;
+            }
+            &:hover {
+                @media (min-width: $breakpoint-xl) {
+                    color: $gray_nobel;
                 }
             }
         }
@@ -59,6 +78,7 @@
         margin-top: 8px;
         padding: 0;
         border-radius: 0;
+        width: 220px;
         .dropdown-item {
             padding: 18px;
             transition: 0.2s ease;
@@ -67,29 +87,11 @@
                 background-color: $orange_bistre;
             }
             @media (max-width: $breakpoint-xl) {
-                padding-left: 28px;
+                padding: 15px 16px 15px 28px;
                 background-color: $black;
                 &:hover {
                     background-color: $black;
                 }
-            }
-        }
-    }
-    .nav-item {
-        font-size: $fontsize-s;
-        .nav-link {
-            display: block;
-            padding: 35px 20px;
-            color: $white;
-            @media (max-width: $breakpoint-xl) {
-                margin-right: 0;
-                padding: 15px 16px;
-            }
-            &:hover {
-                @media (min-width: $breakpoint-xl) {
-                    color: $gray_nobel;
-                }
-                color: $white;
             }
         }
     }
