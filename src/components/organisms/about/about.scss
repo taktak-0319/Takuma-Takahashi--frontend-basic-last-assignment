@@ -1,0 +1,47 @@
+@use "../../variables" as *;
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media (max-width: $breakpoint-lg) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .img-grid {
+        display: grid;
+        grid-template-rows: 298px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        @media (max-width: $breakpoint-xl) {
+            grid-template-rows: 240px;
+        }
+        @media (max-width: $breakpoint-lg) {
+            grid-template-rows: 350px 350px;
+            grid-template-columns: 1fr 1fr;
+            @media (max-width: $breakpoint-md) {
+                grid-template-rows: 270px 270px;
+            }
+        }
+        .img-item1 {
+            background-image: url(../../../img/about-1.jpg);
+            background-size: cover;
+        }
+        .img-item2 {
+            background-image: url(../../../img/about-2.jpg);
+            background-size: cover;
+        }
+        .img-item3 {
+            background-image: url(../../../img/about-3.jpg);
+            background-size: cover;
+        }
+        .img-item4 {
+            background-image: url(../../../img/about-4.jpg);
+            background-size: cover;
+        }
+    }
+    .message_outer {
+        width: 100%;
+        background-color: $white_smoke;
+        .message_title {
+            color: $orange_bistre;
+        }
+    }
+}
