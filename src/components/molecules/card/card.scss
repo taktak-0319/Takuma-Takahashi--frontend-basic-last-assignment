@@ -35,14 +35,19 @@
         font-size: $fontsize-l;
     }
     .card-body {
+        display: flex;
+        flex-direction: column;
         padding: 32px;
         background-color: $white_smoke;
-    }
-    .card-text {
-        font-size: $fontsize-s;
-    }
-    .card-button {
-        display: flex;
-        justify-content: center;
+        .card-text {
+            font-size: $fontsize-s;
+            line-height: 33px;
+        }
+        .card-button {
+            display: flex;
+            justify-content: center;
+            bottom: 0;
+            margin-top: auto;
+        }
     }
 }
