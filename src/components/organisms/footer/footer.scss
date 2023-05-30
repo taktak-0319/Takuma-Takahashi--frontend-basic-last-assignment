@@ -1,1 +1,83 @@
 @use "../../variables" as *;
+footer {
+    .footer-body {
+        text-align: center;
+        padding: 52px 20px;
+        @media (max-width: $breakpoint-md) {
+            padding: 32px 0;
+        }
+        .footer-logo {
+            img {
+                width: 150px;
+                height: 25.7px;
+                margin-bottom: 20px;
+            }
+        }
+        p {
+            font-size: $fontsize-s;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+        .icon-sets {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            a {
+                color: $black;
+                i {
+                    transition: 0.2s ease;
+                    &:hover {
+                        color: $gray_nobel;
+                    }
+                }
+            }
+        }
+    }
+    .footer-nav {
+        font-size: $fontsize-s;
+        color: $black;
+        background-color: $white_smoke;
+        padding: 16px;
+        .footer-nav-list {
+            margin-bottom: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            @media (max-width: $breakpoint-md) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding-left: 0;
+            }
+            li {
+                padding-right: 8px;
+                border-right: solid 1px;
+                transition: 0.2s ease;
+                &:hover {
+                    color: $orange_bistre;
+                }
+                &:nth-child(8) {
+                    border-right: none;
+                }
+                @media (max-width: $breakpoint-md) {
+                    border: none;
+                }
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    line-height: 20px;
+                    &:hover {
+                        color: $orange_bistre;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        color: $white;
+        background-color: $black;
+        text-align: center;
+        padding: 16px 0;
+        font-size: $fontsize-xs;
+    }
+}
