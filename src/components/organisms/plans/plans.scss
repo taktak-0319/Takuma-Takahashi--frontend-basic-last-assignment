@@ -17,11 +17,12 @@
     }
     .plans-content {
         display: flex;
-        margin-bottom: 16px;
+        margin-bottom: 40px;
         justify-content: space-between;
         gap: 25px;
         @media (max-width: $breakpoint-md) {
             display: block;
+            margin-bottom: 24px;
         }
         .plan {
             width: 100%;
