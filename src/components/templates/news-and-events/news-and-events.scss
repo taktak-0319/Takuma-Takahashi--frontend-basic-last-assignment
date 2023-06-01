@@ -1,0 +1,16 @@
+@use "../../variables" as *;
+.news-and-events {
+    padding: 56px 0px;
+    display: flex;
+    // grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    @media (max-width: $breakpoint-lg) {
+        display: flex;
+        flex-flow: column;
+        gap: 35px;
+    }
+    .events {
+        display: flex;
+        flex-direction: column;
+    }
+}
