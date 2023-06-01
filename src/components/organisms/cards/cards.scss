@@ -3,15 +3,13 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
+    gap: 24px;
     @media (max-width: $breakpoint-md) {
         display: block;
         padding-bottom: 0;
+        gap: 40px;
     }
     .card {
-        width: 31%;
-        @media (max-width: $breakpoint-md) {
-            width: 100%;
-            margin-bottom: 40px;
-        }
+        flex: 1;
     }
 }
