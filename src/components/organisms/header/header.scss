@@ -1,5 +1,6 @@
 @use "../../variables" as *;
 .navbar {
+    height: 90px;
     background-color: $black_50;
     width: auto;
     @media (max-width: $breakpoint-xl) {
