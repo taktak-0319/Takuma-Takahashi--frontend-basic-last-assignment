@@ -10,6 +10,7 @@
         border-left: solid 1px $gray_gainsboro;
         list-style: none;
         padding-left: 0px;
+        margin: 0;
         li {
             border-bottom: solid 1px $gray_gainsboro;
             padding: 20px;
@@ -17,6 +18,7 @@
         li:nth-child(1) {
             color: $white;
             font-size: $fontsize-l;
+            font-weight: 700;
             background-color: $orange_zorba;
         }
         li:nth-child(2) {
