@@ -6,7 +6,7 @@
             .caption {
                 font-size: $fontsize-m;
             }
-            @media (max-width: $breakpoint-md) {
+            @media (max-width: $breakpoint-lg) {
                 font-size: $fontsize-l;
                 .caption {
                     font-size: $fontsize-m;
