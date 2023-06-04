@@ -22,12 +22,9 @@
             .news-list {
                 border: solid 1px $gray_gainsboro;
                 background-color: $white;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
                 text-overflow: hidden;
                 padding: 20px 26px 4px 20px;
+                height: calc(402px / 5);
                 time {
                     color: $gray_nobel;
                     font-size: $fontsize-xs;
