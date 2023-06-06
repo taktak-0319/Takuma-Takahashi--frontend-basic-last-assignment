@@ -1,23 +1,21 @@
 @use "../../variables" as *;
 .news-and-events {
-    padding: 56px 0px;
-    display: flex;
-    box-sizing: border-box;
-    gap: 40px;
+  padding: 56px 0px;
+  display: flex;
+  box-sizing: border-box;
+  gap: 40px;
+  @media (max-width: $breakpoint-lg) {
+    flex-flow: column;
+    gap: 35px;
+  }
+  .news {
     @media (max-width: $breakpoint-lg) {
-        flex-flow: column;
-        gap: 35px;
+      width: 100%;
     }
-    .news {
-        width: 48%;
-        @media (max-width: $breakpoint-lg) {
-            width: 100%;
-        }
+  }
+  .events {
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
     }
-    .events {
-        width: 48%;
-        @media (max-width: $breakpoint-lg) {
-            width: 100%;
-        }
-    }
+  }
 }
