@@ -9,11 +9,15 @@
     gap: 35px;
   }
   .news {
+    flex: 1;
+    word-wrap: break-word;
+    min-width: 0;
     @media (max-width: $breakpoint-lg) {
       width: 100%;
     }
   }
   .events {
+    flex: 1;
     @media (max-width: $breakpoint-lg) {
       width: 100%;
     }
