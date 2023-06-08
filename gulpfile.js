@@ -5,11 +5,11 @@ const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 
 gulp.task("default", () =>
-  gulp
+    gulp
     .src("./src/components/**/*.scss")
     .pipe(sass())
     .pipe(concat("style.css"))
-    .pipe(replace("../../../img", "../img"))
+    .pipe(replace("../../../img", "./img"))
     .pipe(cleanCSS())
     .pipe(gulp.dest("./src/page"))
 );
