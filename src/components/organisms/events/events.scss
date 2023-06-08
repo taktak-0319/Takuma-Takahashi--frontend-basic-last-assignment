@@ -1,38 +1,30 @@
 @use "../../variables" as *;
-
 .events {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
   @media (min-width: $breakpoint-lg) {
     margin-bottom: 0;
   }
-
   .event-list {
     margin-bottom: 30px;
-
     .event-card {
       & > a {
         height: 80px;
         display: flex;
         text-decoration: none;
-
         .event-thumbnail {
           display: none;
           width: 207px;
           overflow: hidden;
         }
-
         .event-thumbnail img {
           height: 100%;
           transition: transform 0.5s ease;
         }
-
         &:hover .event-thumbnail img {
           transform: scale(1.2);
         }
-
         .event-caption {
           width: 100%;
           background-color: $white;
@@ -42,7 +34,6 @@
           align-items: flex-start;
           justify-content: center;
           padding: 10px 20px 16px;
-
           & > h3 {
             color: $black;
             font-size: $fontsize-m;
@@ -52,28 +43,26 @@
             text-overflow: ellipsis;
             margin-bottom: 8px;
             width: 100%;
+            @media (min-width: $breakpoint-lg) {
+              white-space: normal;
+            }
           }
-
           .posted-at {
             color: $gray_nobel;
             font-size: $fontsize-xs;
           }
         }
-
         @media (min-width: $breakpoint-lg) {
           height: 134px;
-
           .event-thumbnail {
             display: block;
           }
-
           .event-caption {
             width: calc(100% - 207px);
             padding: 0 24px;
           }
         }
       }
-
       &:not(:first-child) > a .event-caption {
         border-top: none;
       }

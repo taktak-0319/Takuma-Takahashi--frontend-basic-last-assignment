@@ -1,16 +1,25 @@
 @use "../../variables" as *;
 .news-and-events {
-    padding: 56px 0px;
-    display: flex;
-    // grid-template-columns: 1fr 1fr;
-    gap: 40px;
+  padding: 56px 0px;
+  display: flex;
+  box-sizing: border-box;
+  gap: 40px;
+  @media (max-width: $breakpoint-lg) {
+    flex-flow: column;
+    gap: 35px;
+  }
+  .news {
+    flex: 1;
+    word-wrap: break-word;
+    min-width: 0;
     @media (max-width: $breakpoint-lg) {
-        display: flex;
-        flex-flow: column;
-        gap: 35px;
+      width: 100%;
     }
-    .events {
-        display: flex;
-        flex-direction: column;
+  }
+  .events {
+    flex: 1;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
     }
+  }
 }
