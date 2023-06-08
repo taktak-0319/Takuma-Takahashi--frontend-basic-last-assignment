@@ -2,6 +2,27 @@ body {
     font-family: Roboto, "Noto Sans JP", sans-serif;
 }
 
+.assignment-example-button {
+    color: red;
+    font-size: 16px;
+    background: url(img/card-2.jpg);
+}
+
+.news-and-events-more {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.news-and-events-more:hover {
+    color: #999;
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -32,12 +53,6 @@ body {
         width: 180px;
         height: 45px;
     }
-}
-
-.assignment-example-button {
-    color: red;
-    font-size: 16px;
-    background: url(img/card-2.jpg);
 }
 
 .message_outer {
@@ -141,21 +156,6 @@ body {
     justify-content: center;
     bottom: 0;
     margin-top: auto;
-}
-
-.news-and-events-more {
-    cursor: pointer;
-    color: #000;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
-    display: inline-flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.news-and-events-more:hover {
-    color: #999;
 }
 
 .news-and-events-title>h2 {
@@ -306,6 +306,25 @@ body {
     color: #442606;
 }
 
+.cards {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        display: block;
+        padding-bottom: 0;
+        gap: 40px;
+    }
+}
+
+.cards .card {
+    flex: 1;
+}
+
 .events {
     display: flex;
     flex-direction: column;
@@ -395,25 +414,6 @@ body {
 
 .events .news-and-events-more {
     align-self: flex-end;
-}
-
-.cards {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 100px;
-    gap: 24px;
-}
-
-@media (max-width: 768px) {
-    .cards {
-        display: block;
-        padding-bottom: 0;
-        gap: 40px;
-    }
-}
-
-.cards .card {
-    flex: 1;
 }
 
 footer .footer-body {
@@ -519,6 +519,121 @@ footer .footer-bottom {
     padding: 16px 0;
     font-size: 12px;
     width: 100%;
+}
+
+.plans {
+    padding-top: 56px;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+    .plans {
+        padding-bottom: 35px;
+    }
+}
+
+.plans .message_outer {
+    padding-top: 0;
+    padding-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .plans .message_outer {
+        padding-bottom: 56px;
+    }
+}
+
+.plans .message_outer .message_title {
+    color: #442606;
+}
+
+.plans .plans-content {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .plans .plans-content {
+        display: block;
+        margin-bottom: 24px;
+    }
+}
+
+.plans .plans-content .plan {
+    width: 100%;
+}
+
+.plans .button-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.news .news-and-events-title h2 {
+    font-size: 40px;
+}
+
+.news .news-and-events-title h2 .caption {
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    .news .news-and-events-title h2 {
+        font-size: 20px;
+    }
+    .news .news-and-events-title h2 .caption {
+        font-size: 16px;
+    }
+}
+
+.news .content {
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.news .content .news-link {
+    text-decoration: none;
+}
+
+.news .content .news-link .news-list {
+    border: solid 1px #ddd;
+    background-color: #fff;
+    text-overflow: hidden;
+    padding: 20px 26px 4px 20px;
+    height: 80.4px;
+}
+
+.news .content .news-link .news-list time {
+    color: #999;
+    font-size: 12px;
+    padding: 0 0 10px 0;
+}
+
+.news .content .news-link .news-list .info {
+    color: #000;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.news .content .news-link .news-list:hover .info {
+    color: #442606;
+}
+
+.news .content .news-link:not(:first-child) .news-list {
+    border-top: none;
+}
+
+.news .news-and-events-more {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
 }
 
 .navbar {
@@ -637,121 +752,6 @@ footer .footer-bottom {
     .navbar .dropdown-menu .dropdown-item:hover {
         background-color: #000;
     }
-}
-
-.news .news-and-events-title h2 {
-    font-size: 40px;
-}
-
-.news .news-and-events-title h2 .caption {
-    font-size: 16px;
-}
-
-@media (max-width: 992px) {
-    .news .news-and-events-title h2 {
-        font-size: 20px;
-    }
-    .news .news-and-events-title h2 .caption {
-        font-size: 16px;
-    }
-}
-
-.news .content {
-    background-color: #fff;
-    margin-bottom: 30px;
-}
-
-.news .content .news-link {
-    text-decoration: none;
-}
-
-.news .content .news-link .news-list {
-    border: solid 1px #ddd;
-    background-color: #fff;
-    text-overflow: hidden;
-    padding: 20px 26px 4px 20px;
-    height: 80.4px;
-}
-
-.news .content .news-link .news-list time {
-    color: #999;
-    font-size: 12px;
-    padding: 0 0 10px 0;
-}
-
-.news .content .news-link .news-list .info {
-    color: #000;
-    font-size: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;
-    transition: transform 0.2s ease;
-}
-
-.news .content .news-link .news-list:hover .info {
-    color: #442606;
-}
-
-.news .content .news-link:not(:first-child) .news-list {
-    border-top: none;
-}
-
-.news .news-and-events-more {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0;
-}
-
-.plans {
-    padding-top: 56px;
-    padding-bottom: 100px;
-}
-
-@media (max-width: 768px) {
-    .plans {
-        padding-bottom: 35px;
-    }
-}
-
-.plans .message_outer {
-    padding-top: 0;
-    padding-bottom: 32px;
-}
-
-@media (max-width: 768px) {
-    .plans .message_outer {
-        padding-bottom: 56px;
-    }
-}
-
-.plans .message_outer .message_title {
-    color: #442606;
-}
-
-.plans .plans-content {
-    display: flex;
-    margin-bottom: 40px;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-@media (max-width: 768px) {
-    .plans .plans-content {
-        display: block;
-        margin-bottom: 24px;
-    }
-}
-
-.plans .plans-content .plan {
-    width: 100%;
-}
-
-.plans .button-wrap {
-    display: flex;
-    justify-content: center;
 }
 
 .top .top-image {
