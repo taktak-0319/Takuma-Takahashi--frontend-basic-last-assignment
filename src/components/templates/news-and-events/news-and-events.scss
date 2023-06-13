@@ -1,25 +1,29 @@
 @use "../../variables" as *;
 .news-and-events {
-  padding: 56px 0px;
-  display: flex;
-  box-sizing: border-box;
-  gap: 40px;
-  @media (max-width: $breakpoint-lg) {
-    flex-flow: column;
-    gap: 35px;
-  }
-  .news {
-    flex: 1;
-    word-wrap: break-word;
-    min-width: 0;
+  background-color: $white_smoke;
+  .container {
+    padding: 56px 0px;
+    display: flex;
+    box-sizing: border-box;
+    gap: 40px;
+    background-color: $white_smoke;
     @media (max-width: $breakpoint-lg) {
-      width: 100%;
+      flex-flow: column;
+      gap: 35px;
     }
-  }
-  .events {
-    flex: 1;
-    @media (max-width: $breakpoint-lg) {
-      width: 100%;
+    .news {
+      flex: 1;
+      word-wrap: break-word;
+      min-width: 0;
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+      }
+    }
+    .events {
+      flex: 1;
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+      }
     }
   }
 }
